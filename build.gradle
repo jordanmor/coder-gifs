@@ -1,5 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE'
+    }
+}
+
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
 }
 
 group 'com.treehouse'
@@ -12,5 +22,5 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework:spring-webmvc:5.1.8.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE'
 }
