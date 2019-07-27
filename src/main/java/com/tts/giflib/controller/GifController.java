@@ -14,11 +14,12 @@ public class GifController {
     private GifRepository gifRepository;
 
     @GetMapping("/")
-    public String listGifs() {
+    public String listGifs(Model model) {
+        model.addAttribute("gifs", gifRepository.findAll());
         return "home";
     }
 
-    @GetMapping("/images/{name}")
+    @GetMapping("/gifs/{name}")
     public String gifDetails(@PathVariable String name, Model model) {
         model.addAttribute("gif", gifRepository.findByName(name));
         return "gif-details";

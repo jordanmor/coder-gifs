@@ -8,7 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 @Component
-public class GifRepository {    private static final List<Gif> ALL_GIFS = Arrays.asList(
+public class GifRepository {
+    private static final List<Gif> ALL_GIFS = Arrays.asList(
         new Gif("android-explosion", LocalDate.of(2019,2,13), "Chris Ramacciotti", false),
         new Gif("ben-and-mike", LocalDate.of(2019,10,30), "Ben Jakuben", true),
         new Gif("book-dominos", LocalDate.of(2019,9,15), "Craig Dennis", false),
@@ -24,5 +25,9 @@ public class GifRepository {    private static final List<Gif> ALL_GIFS = Arrays
             }
         }
         return null;
+    }
+
+    public List<Gif> findAll() {
+        return ALL_GIFS;
     }
 }
