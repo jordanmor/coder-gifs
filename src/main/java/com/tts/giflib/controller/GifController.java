@@ -13,6 +13,7 @@ public class GifController {
     @Autowired
     private GifRepository gifRepository;
 
+
     @GetMapping("/")
     public String listGifs(Model model) {
         model.addAttribute("gifs", gifRepository.findAll());
