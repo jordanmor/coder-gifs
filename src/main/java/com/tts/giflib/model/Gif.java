@@ -3,18 +3,28 @@ package com.tts.giflib.model;
 import java.time.LocalDate;
 
 public class Gif {
+    private int id;
     private String name;
     private int categoryId;
     private LocalDate dateUploaded;
     private String username;
     private boolean favorite;
 
-    public Gif(String name, int categoryId, LocalDate dateUploaded, String username, boolean favorite) {
+    public Gif(int id, String name, int categoryId, LocalDate dateUploaded, String username, boolean favorite) {
+        this.id = id;
         this.name = name;
         this.categoryId = categoryId;
         this.dateUploaded = dateUploaded;
         this.username = username;
         this.favorite = favorite;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

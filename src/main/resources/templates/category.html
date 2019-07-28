@@ -16,7 +16,7 @@
 
                         <img th:src="@{|/gif/${gif.name}.gif|}" />
 
-                        <a href="#" th:class="(${gif.favorite ? 'un' : ''}) + 'mark favorite'"></a>
+                        <a th:href="@{/category/toggleFavorite(categoryId=${category.id}, gifId=${gif.id})}" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
                     </a>
                 </div>
             </div>
