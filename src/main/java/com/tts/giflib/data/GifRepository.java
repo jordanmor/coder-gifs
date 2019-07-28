@@ -4,6 +4,7 @@ import com.tts.giflib.model.Gif;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class GifRepository {
         new Gif("compiler-bot", 1, LocalDate.of(2019,2,13), "Ada Lovelace", true),
         new Gif("cowboy-coder", 3, LocalDate.of(2019,2,13), "Grace Hopper", false),
         new Gif("infinite-andrew",2, LocalDate.of(2019,8,23), "Marissa Mayer", true)
-);
+    );
 
     public Gif findByName(String name) {
         for (Gif gif : ALL_GIFS) {
@@ -29,5 +30,18 @@ public class GifRepository {
 
     public List<Gif> findAll() {
         return ALL_GIFS;
+    }
+
+    public List<Gif> findByCategoryId(int id) {
+        List<Gif> gifsByCategory = new ArrayList<>();
+        for(Gif gif : ALL_GIFS) {
+            if(gif.getCategoryId() == id) {
+                gifsByCategory.add(gif);
+            }
+        }
+        if(!gifsByCategory.isEmpty()) {
+            return gifsByCategory;
+        }
+        return null;
     }
 }
