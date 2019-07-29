@@ -41,6 +41,19 @@ public class GifRepository {
         return ALL_GIFS;
     }
 
+    public List<Gif> searchByName(String searchString) {
+        List<Gif> searchResult = new ArrayList<>();
+        for(Gif gif : ALL_GIFS) {
+            if(gif.getName().contains(searchString)) {
+                searchResult.add(gif);
+            }
+        }
+        if(!searchResult.isEmpty()) {
+            return searchResult;
+        }
+        return null;
+    }
+
     public List<Gif> findByCategoryId(int id) {
         List<Gif> gifsByCategory = new ArrayList<>();
         for(Gif gif : ALL_GIFS) {

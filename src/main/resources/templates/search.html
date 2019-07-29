@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/layout :: head (pageTitle='Home')"></head>
+<body>
+<header th:replace="fragments/layout :: header"></header>
+<div th:replace="fragments/layout :: search-bar"></div>
+
+<div class="gifs container">
+    <div class="row">
+        <div th:if="${gifs}" th:each="gif : ${gifs}" class="col s12 l4">
+            <a th:href="@{|/gifs/${gif.name}|}">
+                <img th:src="@{|/gif/${gif.name}.gif|}" />
+                <a th:href="@{/toggleFavorite(id=${gif.id})}" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+            </a>
+        </div>
+        <div th:unless="${gifs}">
+            <h2 class="search-not-found">No Search Results Found</h2>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/layout :: js_scripts"></div>
+</body>
+</html>

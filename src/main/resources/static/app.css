@@ -71,6 +71,10 @@ nav ul li.active, nav ul li:hover {
     color: #896bb3;
 }
 
+.search-not-found {
+    text-align: center;
+}
+
 ::-webkit-input-placeholder {
     color: #a29fa6;
 }
