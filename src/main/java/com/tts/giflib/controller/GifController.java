@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -18,13 +17,13 @@ public class GifController {
     @GetMapping("/")
     public String listGifs(Model model) {
         model.addAttribute("gifs", gifRepository.findAll());
-        return "home";
+        return "gif/index";
     }
 
     @GetMapping("/gifs/{name}")
     public String gifDetails(@PathVariable String name, Model model) {
         model.addAttribute("gif", gifRepository.findByName(name));
-        return "gif-details";
+        return "gif/details";
     }
 
     @GetMapping("/toggleFavorite")

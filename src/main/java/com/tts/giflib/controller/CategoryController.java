@@ -21,14 +21,14 @@ public class CategoryController {
     @GetMapping("/categories")
     public String listCategories(Model model) {
         model.addAttribute("categories", categoryRepository.findAll());
-        return "categories";
+        return "category/index";
     }
 
     @GetMapping("/category/{id}")
     public String category(@PathVariable int id, Model model) {
         model.addAttribute("category", categoryRepository.findById(id));
         model.addAttribute("gifs", gifRepository.findByCategoryId(id));
-        return "category";
+        return "category/details";
     }
 
     @GetMapping("/category/toggleFavorite")

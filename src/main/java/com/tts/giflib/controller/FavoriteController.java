@@ -16,7 +16,7 @@ public class FavoriteController {
     @GetMapping("/favorites")
     public String favorites(Model model) {
         model.addAttribute("gifs", gifRepository.findFavorites());
-        return "favorites";
+        return "gif/favorites";
     }
 
     @GetMapping("/favorites/toggleFavorite")
