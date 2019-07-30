@@ -8,11 +8,12 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.tts</groupId>
-    <artifactId>giflib</artifactId>
+    <groupId>com.jm</groupId>
+    <artifactId>coder-gifs</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>giflib</name>
-    <description>A fully-functioning Java web application built using Spring Boot, the Spring Web MVC, Thymeleaf.
+    <name>coder-gifs</name>
+    <description>A fully-functioning Java web application built using Spring Boot, the Spring Web MVC, the Spring Data
+        JPA, Thymeleaf and a mySQL database
     </description>
 
     <properties>
@@ -40,13 +41,18 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -1,6 +1,6 @@
-package com.tts.giflib.data;
+package com.jm.codergifs.repository;
 
-import com.tts.giflib.model.Category;
+import com.jm.codergifs.model.Category;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.tts.giflib.model;
+package com.jm.codergifs.model;
 
 import java.time.LocalDate;
 

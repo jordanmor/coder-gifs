@@ -1,4 +1,4 @@
-package com.tts.giflib.model;
+package com.jm.codergifs.model;
 
 public class Category {
     private int id;

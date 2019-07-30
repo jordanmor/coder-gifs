@@ -1,6 +1,6 @@
-package com.tts.giflib.data;
+package com.jm.codergifs.repository;
 
-import com.tts.giflib.model.Gif;
+import com.jm.codergifs.model.Gif;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -11,12 +11,12 @@ import java.util.List;
 @Component
 public class GifRepository {
     private static final List<Gif> ALL_GIFS = Arrays.asList(
-        new Gif(1, "code-loop", 1, LocalDate.of(2019,2,13), "Chris Ramacciotti", false),
-        new Gif(2, "code-simpsons", 2, LocalDate.of(2019,10,30), "Ben Jakuben", true),
-        new Gif(3, "coding-muppets", 3, LocalDate.of(2019,9,15), "Craig Dennis", false),
-        new Gif(4, "code-mosh", 1, LocalDate.of(2019,2,13), "Ada Lovelace", true),
-        new Gif(5, "cat-coder", 3, LocalDate.of(2019,2,13), "Grace Hopper", false),
-        new Gif(6, "code-scroll",2, LocalDate.of(2019,8,23), "Marissa Mayer", true)
+            new Gif(1, "code-loop", 1, LocalDate.of(2019,2,13), "Chris Ramacciotti", false),
+            new Gif(2, "code-simpsons", 2, LocalDate.of(2019,10,30), "Ben Jakuben", true),
+            new Gif(3, "coding-muppets", 3, LocalDate.of(2019,9,15), "Craig Dennis", false),
+            new Gif(4, "code-mosh", 1, LocalDate.of(2019,2,13), "Ada Lovelace", true),
+            new Gif(5, "cat-coder", 3, LocalDate.of(2019,2,13), "Grace Hopper", false),
+            new Gif(6, "code-scroll",2, LocalDate.of(2019,8,23), "Marissa Mayer", true)
     );
 
     public Gif findByName(String name) {

@@ -1,6 +1,6 @@
-package com.tts.giflib.controller;
+package com.jm.codergifs.controller;
 
-import com.tts.giflib.data.GifRepository;
+import com.jm.codergifs.repository.GifRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

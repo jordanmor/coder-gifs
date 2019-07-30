@@ -1,13 +1,13 @@
-package com.tts.giflib;
+package com.jm.codergifs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GiflibApplication {
+public class CoderGifsApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GiflibApplication.class, args);
+        SpringApplication.run(CoderGifsApplication.class, args);
     }
 
 }
