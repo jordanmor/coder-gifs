@@ -17,6 +17,10 @@ public class GifService {
         return gifRepository.findAll();
     }
 
+    public Gif findById(long id) {
+        return gifRepository.findById(id);
+    }
+
     public Gif findByName(String name) {
         return gifRepository.findByName(name);
     }
@@ -27,5 +31,9 @@ public class GifService {
 
     public List<Gif> findAllFavorites(boolean favorite) {
         return gifRepository.findAllByFavoriteEquals(favorite);
+    }
+
+    public void save(Gif gif) {
+        gifRepository.save(gif);
     }
 }

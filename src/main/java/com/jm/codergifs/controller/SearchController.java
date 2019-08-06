@@ -1,6 +1,6 @@
 package com.jm.codergifs.controller;
 
-import com.jm.codergifs.repository.GifRepository;
+import com.jm.codergifs.service.GifService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SearchController {
 
     @Autowired
-    private GifRepository gifRepository;
+    private GifService gifService;
 
     @GetMapping("/search")
     public String searchGifs(@RequestParam("q") String queryString, Model model) {
-        model.addAttribute("gifs", gifRepository.findByName(queryString));
+        model.addAttribute("gifs", gifService.findByName(queryString));
         return "search";
     }
 }

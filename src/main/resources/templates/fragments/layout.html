@@ -49,6 +49,8 @@
 
         <div class="content">
 
+            <a th:fragment="favorite" th:href="@{/toggleFavorite(id=${gif.id})}" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+
         </div>
 
         <div th:fragment="js_scripts" th:remove="tag">

@@ -10,7 +10,7 @@
         <div th:if="${gifs}" th:each="gif : ${gifs}" class="col s12 l4">
             <a th:href="@{|/gifs/${gif.name}|}">
                 <img th:src="@{|/gif/${gif.name}.gif|}" />
-                <a th:href="@{/toggleFavorite(id=${gif.id})}" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>
+                <a th:replace="fragments/layout :: favorite"></a>
             </a>
         </div>
         <div th:unless="${gifs}">
