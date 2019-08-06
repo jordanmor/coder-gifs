@@ -15,13 +15,13 @@ public class FavoriteController {
 
     @GetMapping("/favorites")
     public String favorites(Model model) {
-        model.addAttribute("gifs", gifRepository.findFavorites());
+        model.addAttribute("gifs", gifRepository.findAllByFavoriteEquals(true));
         return "gif/favorites";
     }
 
     @GetMapping("/favorites/toggleFavorite")
-    public String handleFavorite(@RequestParam("id") int id) {
-        gifRepository.toggleFavorite(id);
+    public String handleFavorite(@RequestParam("id") long id) {
+//        gifRepository.toggleFavorite(id);
         return "redirect:/favorites";
     }
 }

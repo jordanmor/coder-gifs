@@ -1,5 +1,6 @@
 package com.jm.codergifs.controller;
 
+import com.jm.codergifs.repository.CategoryRepository;
 import com.jm.codergifs.repository.GifRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,14 +28,14 @@ public class GifController {
     }
 
     @GetMapping("/toggleFavorite")
-    public String handleFavorite(@RequestParam("id") int id) {
-        gifRepository.toggleFavorite(id);
+    public String handleFavorite(@RequestParam("id") long id) {
+//        gifRepository.toggleFavorite(id);
         return "redirect:/";
     }
 
     @GetMapping("/gifs/toggleFavorite")
-    public String handleFavorite(@RequestParam("id") int id, @RequestParam("name") String name) {
-        gifRepository.toggleFavorite(id);
+    public String handleFavorite(@RequestParam("id") long id, @RequestParam("name") String name) {
+//        gifRepository.toggleFavorite(id);
         return "redirect:/gifs/" + name;
     }
 }

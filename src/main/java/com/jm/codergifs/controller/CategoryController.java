@@ -25,15 +25,15 @@ public class CategoryController {
     }
 
     @GetMapping("/category/{id}")
-    public String category(@PathVariable int id, Model model) {
+    public String category(@PathVariable long id, Model model) {
         model.addAttribute("category", categoryRepository.findById(id));
-        model.addAttribute("gifs", gifRepository.findByCategoryId(id));
+        model.addAttribute("gifs", gifRepository.findAllByCategoryId(id));
         return "category/details";
     }
 
     @GetMapping("/category/toggleFavorite")
-    public String handleFavorite(@RequestParam("categoryId") int categoryId, @RequestParam("gifId") int gifId) {
-        gifRepository.toggleFavorite(gifId);
+    public String handleFavorite(@RequestParam("categoryId") long categoryId, @RequestParam("gifId") long gifId) {
+//        gifRepository.toggleFavorite(gifId);
         return "redirect:/category/" + categoryId;
     }
 }
