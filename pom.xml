@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>coder-gifs</name>
     <description>A fully-functioning Java web application built using Spring Boot, the Spring Web MVC, the Spring Data
-        JPA, Thymeleaf and a mySQL database
+        JPA, Thymeleaf and a MySQL database
     </description>
 
     <properties>
