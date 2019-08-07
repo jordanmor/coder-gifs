@@ -15,7 +15,7 @@ public class SearchController {
 
     @GetMapping("/search")
     public String searchGifs(@RequestParam("q") String queryString, Model model) {
-        model.addAttribute("gifs", gifService.findByName(queryString));
+        model.addAttribute("gifs", gifService.findAllByName(queryString));
         return "search";
     }
 }

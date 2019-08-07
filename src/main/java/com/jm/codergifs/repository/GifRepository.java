@@ -10,6 +10,7 @@ import java.util.List;
 public interface GifRepository extends JpaRepository<Gif, Long> {
     Gif findById(long id);
     Gif findByName(String name);
+    List<Gif> findAllByNameContaining(String name);
     List<Gif> findAllByCategoryId(long id);
     List<Gif> findAllByFavoriteEquals(boolean favorite);
 }

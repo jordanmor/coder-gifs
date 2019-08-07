@@ -24,4 +24,6 @@ public class GifController {
         model.addAttribute("gif", gifService.findByName(name));
         return "gif/details";
     }
+
+
 }

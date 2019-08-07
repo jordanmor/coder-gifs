@@ -25,6 +25,11 @@ public class GifService {
         return gifRepository.findByName(name);
     }
 
+    public List<Gif> findAllByName(String name) {
+        List<Gif> gifs = gifRepository.findAllByNameContaining(name);
+        return !gifs.isEmpty() ? gifs : null;
+    }
+
     public List<Gif> findAllByCategoryId(long id) {
         return gifRepository.findAllByCategoryId(id);
     }
